@@ -11,61 +11,63 @@ body{
 }
 
 .wrapper{
-    padding: 5px;
-    max-width: 960px;
+    padding: 20px;
+    max-width: 650px;
     width: 95%;
     margin: 20px auto;
 
 }
 
-.columns{
+.container{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    border: 12px solid white;
+    border: 10px solid white;
+    height: 500px;
   
 }
 
 .column{
     flex:1;
     border: 1px solid rgba(2, 2, 17, 0.986);
-    height: 200px;
     text-align: center;
 }
 
-.column:first-child{
-    margin-left: 0;
-}
 
-.column:last-child{
-    margin-right: auto;
 
-}
 
+/* create infinite background color */
 #column1{
-    padding-top: 95px;
+    padding-top: 220px;
     background-color: blue;
+    animation: colorChanges 2s infinite;
 }
+
+@keyframes colorChanges {
+  from {background-color:blue;}
+  to {background-color:yellow;}
+}
+
 
 #column2{
-    padding-top: 95px;
+    padding-top: 220px;
     background-color: white;
 }
 #column3{
-    padding-top: 95px;
+    
     background-color: blue;
+    
 }
 
-h1{
 
-}
 
-.element { 
-    margin:auto;
-    vertical-align:middle;
- 
-  animation: roll 3s infinite;
-  transform: rotate(30deg);
+
+
+/* rote the text from the secode div */
+.rotation { 
+margin:auto;
+animation: roll 2s infinite;
+transform: rotate(0);
   
 }
 
@@ -76,4 +78,17 @@ h1{
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+/* up and down text */
+#mytext{
+    position: relative;
+    animation: upAndDown 2s infinite;
+}
+
+@keyframes upAndDown {
+  0% {top: 10%;}
+  50% {top: 50%;}
+  100% {top: 80%;}
 }
